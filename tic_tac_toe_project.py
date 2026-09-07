@@ -7,8 +7,12 @@ board_grid =[
  
 
 #displaying board as 3x3 grid
-for row in board_grid:
+def update():
+ for row in board_grid:
     print(row)
+
+update()
+print()
 
 #creating user input logic
 choice = int(input("which space would you like to mark? "))
@@ -33,6 +37,6 @@ elif choice == 8:
 elif choice == 9:
     board_grid[2][2] = "X"
     
-
+update()
                 
                
