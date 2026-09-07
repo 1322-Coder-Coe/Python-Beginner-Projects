@@ -21,24 +21,88 @@ while True:
     player_1 = int(input("Player 1: Which space would you like to mark with X? "))
 
 # Mapping choice to grid locations
+    
     if player_1 == 1:
-      board_grid[0][0] = "X"
+        if board_grid[0][0] == "X" or board_grid[0][0] == "O": 
+            print("Spot is taken! Pick another spot: ")
+            print()
+            player_1 = int(input("Player 1: Which space would you like to mark with X? "))
+            print()
+        
+        else: 
+            board_grid[0][0] = "X"
+            
     elif player_1 == 2:
-      board_grid[0][1] = "X"
+        if board_grid[0][1] == "X" or board_grid[0][1] == "O": 
+            print("Spot is taken! Pick another spot: ")
+            print()
+            player_1 = int(input("Player 1: Which space would you like to mark with X? "))
+            print()
+        else: 
+            board_grid[0][1] = "X"
+            
     elif player_1 == 3:
-      board_grid[0][2] = "X"
+        if board_grid[0][2] == "X" or board_grid[0][2] == "O": 
+            print("Spot is taken! Pick another spot: ")
+            print()
+            player_1 = int(input("Player 1: Which space would you like to mark with X? "))
+            print()
+        else: 
+            board_grid[0][2] = "X"
+            
     elif player_1 == 4:
-      board_grid[1][0] = "X"
+        if board_grid[1][0] == "X" or board_grid[1][0] == "O": 
+            print("Spot is taken! Pick another spot: ")
+            print()
+            player_1 = int(input("Player 1: Which space would you like to mark with X? "))
+            print()
+        else: 
+            board_grid[1][0] = "X"
+            
     elif player_1 == 5:
-      board_grid[1][1] = "X"
+        if board_grid[1][1] == "X" or board_grid[1][1] == "O": 
+            print("Spot is taken! Pick another spot: ")
+            print()
+            player_1 = int(input("Player 1: Which space would you like to mark with X? "))
+            print()
+        else: 
+            board_grid[1][1] = "X"
+            
     elif player_1 == 6:
-      board_grid[1][2] = "X"
+        if board_grid[1][2] == "X" or board_grid[1][2] == "O": 
+            print("Spot is taken! Pick another spot: ")
+            print()
+            player_1 = int(input("Player 1: Which space would you like to mark with X? "))
+            print()
+        else: 
+            board_grid[1][2] = "X"
+            
     elif player_1 == 7:
-      board_grid[2][0] = "X"
+        if board_grid[2][0] == "X" or board_grid[2][0] == "O": 
+            print("Spot is taken! Pick another spot: ")
+            print()
+            player_1 = int(input("Player 1: Which space would you like to mark with X? "))
+            print()
+        else: 
+             board_grid[2][0] = "X"
+             
     elif player_1 == 8:
-      board_grid[2][1] = "X"
+        if board_grid[2][1] == "X" or board_grid[2][1] == "O": 
+            print("Spot is taken! Pick another spot: ")
+            print()
+            player_1 = int(input("Player 1: Which space would you like to mark with X? "))
+            print()
+        else: 
+             board_grid[2][1] = "X"
+             
     elif player_1 == 9:
-      board_grid[2][2] = "X"
+        if board_grid[2][2] == "X" or board_grid[2][2] == "O": 
+            print("Spot is taken! Pick another spot: ")
+            print()
+            player_1 = int(input("Player 1: Which space would you like to mark with X? "))
+            print()
+        else: 
+             board_grid[2][2] = "X"
 
 #creating space under display
     print()
@@ -76,3 +140,4 @@ while True:
 
 # displaying user input mark in grid 
     update()
+    print()
