@@ -20,15 +20,13 @@ print()
 while True:
     player_1 = int(input("Player 1: Which space would you like to mark with X? "))
 
-# Mapping choice to grid locations
+# Mapping player_1 choice to grid locations
     
     if player_1 == 1:
         if board_grid[0][0] == "X" or board_grid[0][0] == "O": 
             print("Spot is taken! Pick another spot: ")
             print()
-            player_1 = int(input("Player 1: Which space would you like to mark with X? "))
-            print()
-        
+            continue
         else: 
             board_grid[0][0] = "X"
             
@@ -36,8 +34,7 @@ while True:
         if board_grid[0][1] == "X" or board_grid[0][1] == "O": 
             print("Spot is taken! Pick another spot: ")
             print()
-            player_1 = int(input("Player 1: Which space would you like to mark with X? "))
-            print()
+            continue
         else: 
             board_grid[0][1] = "X"
             
@@ -45,8 +42,7 @@ while True:
         if board_grid[0][2] == "X" or board_grid[0][2] == "O": 
             print("Spot is taken! Pick another spot: ")
             print()
-            player_1 = int(input("Player 1: Which space would you like to mark with X? "))
-            print()
+            continue
         else: 
             board_grid[0][2] = "X"
             
@@ -54,8 +50,7 @@ while True:
         if board_grid[1][0] == "X" or board_grid[1][0] == "O": 
             print("Spot is taken! Pick another spot: ")
             print()
-            player_1 = int(input("Player 1: Which space would you like to mark with X? "))
-            print()
+            continue
         else: 
             board_grid[1][0] = "X"
             
@@ -63,8 +58,7 @@ while True:
         if board_grid[1][1] == "X" or board_grid[1][1] == "O": 
             print("Spot is taken! Pick another spot: ")
             print()
-            player_1 = int(input("Player 1: Which space would you like to mark with X? "))
-            print()
+            continue
         else: 
             board_grid[1][1] = "X"
             
@@ -72,8 +66,7 @@ while True:
         if board_grid[1][2] == "X" or board_grid[1][2] == "O": 
             print("Spot is taken! Pick another spot: ")
             print()
-            player_1 = int(input("Player 1: Which space would you like to mark with X? "))
-            print()
+            continue
         else: 
             board_grid[1][2] = "X"
             
@@ -81,8 +74,7 @@ while True:
         if board_grid[2][0] == "X" or board_grid[2][0] == "O": 
             print("Spot is taken! Pick another spot: ")
             print()
-            player_1 = int(input("Player 1: Which space would you like to mark with X? "))
-            print()
+            continue
         else: 
              board_grid[2][0] = "X"
              
@@ -90,8 +82,7 @@ while True:
         if board_grid[2][1] == "X" or board_grid[2][1] == "O": 
             print("Spot is taken! Pick another spot: ")
             print()
-            player_1 = int(input("Player 1: Which space would you like to mark with X? "))
-            print()
+            continue
         else: 
              board_grid[2][1] = "X"
              
@@ -99,8 +90,7 @@ while True:
         if board_grid[2][2] == "X" or board_grid[2][2] == "O": 
             print("Spot is taken! Pick another spot: ")
             print()
-            player_1 = int(input("Player 1: Which space would you like to mark with X? "))
-            print()
+            continue
         else: 
              board_grid[2][2] = "X"
 
@@ -109,35 +99,115 @@ while True:
 
 # displaying user input mark in grid 
     update()
-               
+    #applying test for win in first loop
+    if board_grid[0][0] == "X" and board_grid[0][1] == "X" and board_grid[0][2] == "X":
+        print("Congratulations Player 1! You Won")
+        break
+
+    elif board_grid[0][0] == "O" and board_grid[0][1] == "O" and board_grid[0][2] == "O":
+        print("Congratulations Player 2! You Won")
+        break          
 #creating space
     print()          
-#player 2 input
-    player_2 = int(input("Player 2: Which space would you like to mark with O? "))
+    
+    # creating nested while loop for player 2
+    while True:
+        player_2 = int(input("Player 2: Which space would you like to mark with O? "))
+        
+        # Mapping player_2 choice to grid locations
+        if player_2 == 1:
+            if board_grid[0][0] == "X" or board_grid[0][0] == "O": 
+                print("Spot is taken! Pick another spot: ")
+                print()
+                continue
+            else: 
+                board_grid[0][0] = "O"
+                break
+                
+        elif player_2 == 2:
+            if board_grid[0][1] == "X" or board_grid[0][1] == "O": 
+                print("Spot is taken! Pick another spot: ")
+                print()
+                continue
+            else: 
+                board_grid[0][1] = "O"
+                break
+                
+        elif player_2 == 3:
+            if board_grid[0][2] == "X" or board_grid[0][2] == "O": 
+                print("Spot is taken! Pick another spot: ")
+                print()
+                continue
+            else: 
+                board_grid[0][2] = "O"
+                break
+                
+        elif player_2 == 4:
+            if board_grid[1][0] == "X" or board_grid[1][0] == "O": 
+                print("Spot is taken! Pick another spot: ")
+                print()
+                continue
+            else: 
+                board_grid[1][0] = "O"
+                break
+                
+        elif player_2 == 5:
+            if board_grid[1][1] == "X" or board_grid[1][1] == "O": 
+                print("Spot is taken! Pick another spot: ")
+                print()
+                continue
+            else: 
+                board_grid[1][1] = "O"
+                break
+                
+        elif player_2 == 6:
+            if board_grid[1][2] == "X" or board_grid[1][2] == "O": 
+                print("Spot is taken! Pick another spot: ")
+                print()
+                continue
+            else: 
+                board_grid[1][2] = "O"
+                break
+                
+        elif player_2 == 7:
+            if board_grid[2][0] == "X" or board_grid[2][0] == "O": 
+                print("Spot is taken! Pick another spot: ")
+                print()
+                continue
+            else: 
+                board_grid[2][0] = "O"
+                break
+                
+        elif player_2 == 8:
+            if board_grid[2][1] == "X" or board_grid[2][1] == "O": 
+                print("Spot is taken! Pick another spot: ")
+                print()
+                continue
+            else: 
+                board_grid[2][1] = "O"
+                break
+                
+        elif player_2 == 9:
+            if board_grid[2][2] == "X" or board_grid[2][2] == "O": 
+                print("Spot is taken! Pick another spot: ")
+                print()
+                continue
+            else: 
+                board_grid[2][2] = "O"
+                break
 
-# Mapping choice to grid locations
-    if player_2 == 1:
-      board_grid[0][0] = "O"
-    elif player_2 == 2:
-      board_grid[0][1] = "O"
-    elif player_2 == 3:
-      board_grid[0][2] = "O"
-    elif player_2 == 4:
-      board_grid[1][0] = "O"
-    elif player_2 == 5:
-      board_grid[1][1] = "O"
-    elif player_2 == 6:
-      board_grid[1][2] = "O"
-    elif player_2 == 7:
-      board_grid[2][0] = "O"
-    elif player_2 == 8:
-      board_grid[2][1] = "O"
-    elif player_2 == 9:
-      board_grid[2][2] = "O"
-
-#creating space under display
+    # creating space under display
     print()
 
-# displaying user input mark in grid 
+    # displaying user input mark in grid 
     update()
     print()
+
+      
+    if board_grid[0][0] == "X" and board_grid[0][1] == "X" and board_grid[0][2] == "X":
+        print("Congratulations Player 1! You Won")
+        break
+
+    elif board_grid[0][0] == "O" and board_grid[0][1] == "O" and board_grid[0][2] == "O":
+        print("Congratulations Player 2! You Won")
+        break
